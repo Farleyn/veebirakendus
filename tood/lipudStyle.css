@@ -1,0 +1,19 @@
+#eesti{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0px;
+}
+/*pseudoelementide kasutamine*/
+/*esimene rida*/
+#eesti tr:nth-child(1){
+    background-color: blue;
+}
+/*teine rida*/
+#eesti tr:nth-child(2){
+    background-color: black;
+}
+/*kolmas rida*/
+#eesti tr:nth-child(3){
+    background-color: white;
+}
