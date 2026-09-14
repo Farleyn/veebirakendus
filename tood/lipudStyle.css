@@ -94,3 +94,10 @@
     top: 900px;
     left: 40%;
 }
+
+#madagaskar tr:nth-child(1) td:nth-child(2){
+    background-color: red;
+}
+#madagaskar tr:nth-child(2) td:nth-child(1){
+    background-color: green;
+}
