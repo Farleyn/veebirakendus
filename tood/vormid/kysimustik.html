@@ -83,7 +83,10 @@
         </tr>
         <tr>
             <td>
-                0<input type="range" id="tund" min="0" max="24">24
+                <input type="range" id="tund" min="0" max="24"
+                       oninput="tundValue.value = this.value">
+                <output id="tundValue">0</output>
+
             </td>
         </tr>
         <tr>
