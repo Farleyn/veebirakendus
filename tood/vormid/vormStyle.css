@@ -17,7 +17,25 @@ input[type=text], input[type=date], input[type=email]{
 label{
     font-weight: bold;
 }
-input[type=radio]:hover{
+input[type=radio]+label:hover{
     font-size: 20pt;
-    background-color: lightcyan;
+    transition: 250ms;
+}
+input[type=checkbox]+label{
+    background-color: lightgrey;
+    font-size: 10pt;
+    padding: 5px;
+    width: 60px;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 40px;
+    transition: 250ms;
+}
+
+input[type=checkbox]+label:hover{
+    background-color: grey;
+    color: white;
+    font-weight: bold;
 }
