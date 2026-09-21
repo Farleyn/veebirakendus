@@ -1,0 +1,23 @@
+form{
+    text-align: left;
+    border-radius: 30px;
+}
+table, td{
+    border-collapse: collapse;
+    width: 40%;
+    padding: 2%;
+    border-radius: 30px;
+    background-color: lightgray;
+}
+input[type=text], input[type=date], input[type=email]{
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 1%;
+}
+label{
+    font-weight: bold;
+}
+input[type=radio]:hover{
+    font-size: 20pt;
+    background-color: lightcyan;
+}
