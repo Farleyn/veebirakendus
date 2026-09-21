@@ -9,65 +9,60 @@
 <h1>Muusika küsimustik</h1>
 <div>HTML vormid ja nupud</div>
 <form action="#">
-    <!-- c + tab komentaar -->
-    <table border="1">
+    <table>
         <tr>
             <td>
-                <!-- Tekstkast -->
                 <label for="nimi">Nimi:</label>
             </td>
             <td>
-                <input type="text" id="nimi" placeholder="Nikita Grossholm">
+                <input type="text" id="nimi" name="nimi" placeholder="Nikita Grossholm">
             </td>
         </tr>
-        <td>
-            <!-- ripploend või rippmenüü (выпадающий список) -->
-            <label for="stiil">Vali meeldivaim muusikastiil</label>
-        </td>
-        <td>
-            <select name="stiil" id="stiil">
-                <option value="vali">vali..</option>
-                <option value="hiphop">hiphop</option>
-                <option value="kantri">kantri</option>
-                <option value="metal">metal</option>
-                <option value="rock">rock</option>
-                <option value="jazz">jazz</option>
-            </select>
-        </td>
         <tr>
             <td>
-                <!-- radio nupud -üks valik mitmest -->
-                <strong for="">
-                    Kuidas sa muusikat peamiselt kuulad?
-                </strong>
+                <label for="stiil">Vali meeldivaim muusikastiil</label>
             </td>
             <td>
-                <input type="radio" name="platvorm" id="spotify">
+                <select name="stiil" id="stiil">
+                    <option value="vali">vali..</option>
+                    <option value="hiphop">hiphop</option>
+                    <option value="kantri">kantri</option>
+                    <option value="metal">metal</option>
+                    <option value="rock">rock</option>
+                    <option value="jazz">jazz</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Kuidas sa muusikat peamiselt kuulad?</strong>
+            </td>
+            <td>
+                <input type="radio" name="platvorm" id="spotify" value="spotify">
                 <label for="spotify">Spotify</label>
                 <br>
-                <input type="radio" name="platvorm" id="soundcloud">
-                <label for="spotify">Soundcloud</label>
+                <input type="radio" name="platvorm" id="soundcloud" value="soundcloud">
+                <label for="soundcloud">Soundcloud</label>
                 <br>
-                <input type="radio" name="platvorm" id="raadio">
-                <label for="spotify">Raadio</label>
+                <input type="radio" name="platvorm" id="raadio" value="raadio">
+                <label for="raadio">Raadio</label>
                 <br>
-                <input type="radio" name="platvorm" id="vinüülplaat">
-                <label for="spotify">Vinüülplaat</label>
+                <input type="radio" name="platvorm" id="vinüülplaat" value="vinüülplaat">
+                <label for="vinüülplaat">Vinüülplaat</label>
                 <br>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <!-- checkbox -->
                 <fieldset>
                     <legend>Tee oma valikud - lemmik ansambel</legend>
-                    <input type="checkbox" name="lemmikud" id="systemofdown">
+                    <input type="checkbox" name="lemmikud" id="systemofdown" value="systemofdown">
                     <label for="systemofdown">System Of Down</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="metallica">
+                    <input type="checkbox" name="lemmikud" id="metallica" value="metallica">
                     <label for="metallica">Metallica</label>
                     <br>
-                    <input type="checkbox" name="lemmikud" id="hm">
+                    <input type="checkbox" name="lemmikud" id="hm" value="hm">
                     <label for="hm">Haunted Mound</label>
                     <br>
                 </fieldset>
@@ -75,67 +70,60 @@
         </tr>
         <tr>
             <td>
-                <!-- range - vahemik -->
-                <label for="tund">
-                    Mitu tundi päevas sa kuulad muusikat?
-                </label>
+                <label for="tund">Mitu tundi päevas sa kuulad muusikat?</label>
+            </td>
+            <td>
+                <input type="range" id="tund" name="tund" min="0" max="24" oninput="tundValue.value = this.value">
+                <output id="tundValue" for="tund">0</output>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="range" id="tund" min="0" max="24"
-                       oninput="tundValue.value = this.value">
-                <output id="tundValue">0</output>
-
+                <label for="email">Sisesta sinu email:</label>
+            </td>
+            <td>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com">
             </td>
         </tr>
         <tr>
             <td>
-                Sisesta sinu email:
+                <label for="värv">Vali sinu lemmik värv:</label>
             </td>
             <td>
-                <input type="email" placeholder="example@gmail.com">
+                <input type="color" id="värv" name="värv">
             </td>
         </tr>
         <tr>
             <td>
-                Vali sinu lemmik värv:
+                <label for="muusikafail">Vali sinu lemmik muusika failis:</label>
             </td>
             <td>
-                <input type="color">
+                <input type="file" id="muusikafail" name="muusikafail">
             </td>
         </tr>
         <tr>
             <td>
-                Vali sinu lemmik muusika failis:
+                <label for="otsing">Otsi muusikat:</label>
             </td>
             <td>
-                <input type="file">
+                <input type="search" id="otsing" name="otsing" placeholder="minu lemmik muusika">
             </td>
         </tr>
         <tr>
             <td>
-                Otse muusikat:
+                <label for="kuupaev">Millal sa viimati muusikat kuulasid?</label>
             </td>
             <td>
-                <input type="search" placeholder="minu lemmik muusika">
+                <input type="date" id="kuupaev" name="kuupaev">
             </td>
         </tr>
         <tr>
+            <td>Salvesta muudatused</td>
             <td>
-                Millal sa viimati muusikat kuulasid?
+                <input type="submit" value="Salvesta">
             </td>
-            <td>
-                <input type="date">
-            </td>
-        <tr>
-        <td>Salvesta muudatused</td>
-        <td>
-            <input type="submit">
-        </td>
         </tr>
     </table>
-
 </form>
 </body>
 </html>

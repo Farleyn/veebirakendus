@@ -2,10 +2,17 @@ form{
     text-align: left;
     border-radius: 30px;
 }
-table, td{
+table{
     border-collapse: collapse;
     width: 40%;
+    border: 1px solid gray;
+    border-radius: 30px;
+    background-color: lightgray;
+}
+td{
+    width: 40%;
     padding: 2%;
+    border: 1px solid gray;
     border-radius: 30px;
     background-color: lightgray;
 }
