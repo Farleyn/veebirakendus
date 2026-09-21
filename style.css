@@ -1,151 +1,132 @@
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f6f8fc;
+    color: #243447;
+    font-family: Arial, sans-serif;
 }
-
 
 h1 {
     font-size: x-large;
-    font-family: "Sans Serif Collection";
-    color: darkred; /*tektsi värv*/
+    font-family: "Sans Serif Collection", Arial, sans-serif;
+    color: #23395d;
 }
 
 header h1 {
     padding: 5%;
+    margin: 0;
     font-variant: small-caps;
 }
 
-header{
-    background-color: indianred;
+header {
+    background-color: #dbeafe;
+    border-bottom: 2px solid #93c5fd;
     background-image: url('pilt.png');
-    background-repeat: repeat-x;
-    background-position: 10px 10px;
-
+    background-repeat: no-repeat;
+    background-position: calc(100% - 30px) center;
+    background-size: 90px;
 }
+
 footer {
-    padding: 5%;
-    background-color: indianred;
+    margin-top: 30px;
+    padding: 3% 5%;
+    background-color: #dbeafe;
+    color: #23395d;
     font-variant: small-caps;
-    border-bottom: 2px dotted orange;
+    border-top: 2px solid #93c5fd;
 }
 
-section, img{
-    border: 1px solid lightgray; /*soild, double, dashed, dotted*/
-    width: 25%;
-    margin: 5px;
-    padding: 1%;
-    border-radius: 50px 150px 50px 50px;
-    text-align: center;
+nav {
+    margin: 0;
 }
-/***NAV***/
 
-nav ul{
-    list-style-type: none; /*täpp võtab ära */
+nav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: darkred;
+    background-color: #23395d;
     text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
-nav ul li{
+nav ul li {
     float: left;
 }
 
-nav ul li a{
+nav ul li a {
     display: block;
-    color: yellow;
-    text-decoration: none; /*alljone on kustatud*/
-    padding: 5px 10px;
-    border-left: 2px solid lightgray;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-left: 1px solid #526a8a;
 }
 
-nav ul li a:hover{
-    color: darkkhaki;
+nav ul li a:hover {
+    color: #dbeafe;
+    background-color: #334f7d;
 }
 
-nav{
-    margin-left: 50px;
-}
-main{
-    margin-top: 50px;
-}
-
-section#kast1 {
-    text-align: center;
-    background-color: darkgoldenrod;
-    color: white;
-    background-size: initial;
-    background-repeat: no-repeat;
-}
-
-section#kast2 {
-    text-align: center;
-    background-color: darkgoldenrod;
-    color: white;
-    background-size: 90px;
-    background-repeat: no-repeat;
-    box-sizing: inherit;
-    border-radius: 67px 856px 75px 953px;
-}
-
-section#kast3 {
-    text-align: center;
-    background-color: darkkhaki;
-    color: white;
-    background-size: 90px;
-    font-variant: super;
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 200px;
-}
-
-section#kast4 {
-    text-align: right;
-    background-color: darkkhaki;
-    box-sizing: inherit;
-    border-radius: 222px 222px;
-}
-
-section#kast5 {
-    text-align: revert;
-    background-color: darkorange;
-    border-bottom-right-radius: 222px 222px;
-
-}
-
-section#kast6 {
-    text-align: start;
-    background-color: yellow;
-    border-radius: 600px;
-}
-
-/**GRID**/
 main {
+    margin-top: 30px;
+    padding: 0 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 section {
-    border: 2px solid lightgray;
+    border: 1px solid #cbd5e1;
     margin: 0;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 16px;
     text-align: center;
-    background-color: white;
+    background-color: #ffffff;
     box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(35, 57, 93, 0.08);
 }
-/*pildid*/
+
+section#kast1 {
+    text-align: center;
+    background-color: #eef4ff;
+    color: #243447;
+}
+
+section#kast2 {
+    text-align: center;
+    background-color: #ecfeff;
+    color: #243447;
+}
+
+section#kast3 {
+    text-align: center;
+    background-color: #f3e8ff;
+    color: #243447;
+}
+
+section#kast4 {
+    text-align: right;
+    background-color: #fef3c7;
+    color: #243447;
+}
+
+section#kast5 {
+    text-align: center;
+    background-color: #dcfce7;
+    color: #243447;
+}
+
+section#kast6 {
+    text-align: start;
+    background-color: #ffe4e6;
+    color: #243447;
+}
 
 section#pildigalerii {
-    background-color: darkgoldenrod;
-    color: white;
+    background-color: #eef4ff;
+    color: #243447;
 }
 
 #pildigalerii img {
@@ -154,19 +135,17 @@ section#pildigalerii {
     object-fit: cover;
     margin: 5px;
     padding: 0;
-    border: 2px solid white;
+    border: 2px solid #ffffff;
     border-radius: 10px;
 }
 
 #pildigalerii img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/*video*/
-
 section#video {
-    background-color: darkkhaki;
-    color: white;
+    background-color: #ecfeff;
+    color: #243447;
 }
 
 #video iframe {
@@ -176,12 +155,12 @@ section#video {
     border: none;
     border-radius: 10px;
 }
-/*kaart*/
 
 section#kaart {
-    background-color: darkorange;
-    color: white;
+    background-color: #fef3c7;
+    color: #243447;
 }
+
 #kaart iframe {
     width: 100%;
     max-width: 600px;
@@ -189,10 +168,10 @@ section#kaart {
     border: none;
     border-radius: 10px;
 }
-/*musika*/
-section#muusika{
-    background-color: purple;
-    color: white;
+
+section#muusika {
+    background-color: #f3e8ff;
+    color: #243447;
 }
 
 #muusika iframe {
@@ -202,3 +181,12 @@ section#muusika{
     border-radius: 12px;
 }
 
+section#kast2 img {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 0;
+    margin: 0;
+}
