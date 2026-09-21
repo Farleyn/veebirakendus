@@ -2,23 +2,32 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Map area</title>
+    <title>Klaviatuur</title>
+    <link rel="stylesheet" href="mapareaStyle.css">
 </head>
 <body>
-<h1>Map area kasutamine</h1>
-<div>see on minu klaviatuur! Klaviatuur ehk sõrmistik on arvuti sisendseade, mis koosneb sõrmedega vajutatavatest klahvidest tähtede, numbrite ja erisümbolite sisestamiseks ning arvutile käskude andmiseks</div>
-<img src="arvutipilt.jpg" alt="arvuti pilt" usemap="#arvuti">
-<map name="arvuti">
-    <area shape="circle" coords="630,360,20" href="https://1it.ee/arvutitark-inimene/" alt="nina" target="_blank" rel="noopener noreferrer">
-    <area shape="rect" coords="120,630,720,760" href="klaviatuur.html" alt="klaviatuur" target="_blank" rel="noopener noreferrer">
-    <area shape="poly" coords="570,160,835,345,650,315" href="prillid.html" alt="prillid" target="_blank" rel="noopener noreferrer">
-    <area shape="circle" coords="615,245,10" href="silm1.html" alt="silm1" target="_blank" rel="noopener noreferrer">
-    <area shape="rect" coords="545,350,650,430" href="suu.html" alt="suu" target="_blank" rel="noopener noreferrer">
-    <area shape="rect" coords="50,75,350,210" href="testnupp.html" alt="testnupp" target="_blank" rel="noopener noreferrer">
-    <area shape="poly" coords="460,440,580,530,475,530" href="https://lipsud.ee/toode/seotav-kikilips-2/" alt="lips" target="_blank" rel="noopener noreferrer">
-
-    <!-- circle coords=(x,y,R) -->
-</map>
-
+<main>
+    <a href="maparea.html">Tagasi maparea lehele</a>
+    <h1>Klaviatuur</h1>
+    <div>
+        <section>
+            <h2>Klaviatuur</h2>
+            <p>Klaviatuur ehk sõrmistik on arvuti sisendseade, mis koosneb sõrmedega vajutatavatest klahvidest tähtede, numbrite ja erisümbolite sisestamiseks ning arvutile käskude andmiseks.</p>
+        </section>
+        <section class="picture-box">
+            <img src="arvutipilt.jpg" alt="Pilt teemal klaviatuur" usemap="#arvuti">
+            
+        <map name="arvuti">
+            <area shape="circle" coords="630,360,20" href="https://1it.ee/arvutitark-inimene/" alt="nina" target="_blank" rel="noopener noreferrer">
+            <area shape="rect" coords="120,630,720,760" href="klaviatuur.html" alt="klaviatuur" target="_blank" rel="noopener noreferrer">
+            <area shape="poly" coords="570,160,835,345,650,315" href="prillid.html" alt="prillid" target="_blank" rel="noopener noreferrer">
+            <area shape="circle" coords="615,245,10" href="silm1.html" alt="silm1" target="_blank" rel="noopener noreferrer">
+            <area shape="rect" coords="545,350,650,430" href="suu.html" alt="suu" target="_blank" rel="noopener noreferrer">
+            <area shape="rect" coords="50,75,350,210" href="testnupp.html" alt="testnupp" target="_blank" rel="noopener noreferrer">
+            <area shape="poly" coords="460,440,580,530,475,530" href="https://lipsud.ee/toode/seotav-kikilips-2/" alt="lips" target="_blank" rel="noopener noreferrer">
+        </map>
+        </section>
+    </div>
+</main>
 </body>
 </html>
