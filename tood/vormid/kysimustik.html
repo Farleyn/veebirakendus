@@ -134,6 +134,37 @@
                 <input type="date" id="kuupaev" name="kuupaev">
             </td>
         </tr>
+
+        <tr>
+
+        </tr>
+        <td>
+            <b>Kas sa kuulad raadiot?</b>
+        </td>
+        <tf>
+        <td>
+            <input type="radio" id="yes" name="raadioValik" value="jah" onclick="radioValik1()">
+            <label for="yes">Jah</label>
+            <input type="radio" id="no" name="raadioValik" value="ei" onclick="radioValik1()">
+            <label for="no">Ei</label>
+        </td>
+            <td>
+                <div id="yesorno"></div>
+            </td>
+        </tf>
+
+        <tr>
+            <td>
+                <label for="raadiojaam">Milliseid raadiojaamu oskad nimetada?</label>
+            </td>
+            <td>
+                <input type="text" name="raadiojaam" id="raadiojaam" placeholder="skyradio" oninput="raadiojaamvalik()">
+            </td>
+            <td>
+                <div id="vastus9"></div>
+            </td>
+        </tr>
+
         <tr>
             <td>Salvesta muudatused</td>
             <td>

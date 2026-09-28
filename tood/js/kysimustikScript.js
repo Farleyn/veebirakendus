@@ -32,6 +32,18 @@ function radioValik(){
     return valik;
 }
 
+function radioValik1() {
+    let yes = document.getElementById("yes");
+    let no = document.getElementById("no");
+    let vastus = document.getElementById("yesorno");
+
+    if (yes.checked) {
+        vastus.innerHTML = "sa valisid: jah";
+    } else if (no.checked) {
+        vastus.innerHTML = "sa valsid: ei";
+    }
+}
+
 function checkboxValik(){
     let vastus3=document.getElementById("vastus3");
     let systemofdown=document.getElementById("systemofdown");
@@ -63,6 +75,7 @@ function naitaKoike(){
     let valik=radioValik();
     let valik2=checkboxValik();
     let tund=rangeValik();
+    let yesorno=radioValik1()
 
     vastusKoik.innerHTML="Sinu nimi on: " +nimi+'<br>'+
         'Sinu lemmikud on: ' + valik2 + '<br>'+
@@ -99,4 +112,11 @@ function selectValik(){
     }
 
     return stiil.value;
+}
+
+function raadiojaamvalik(){
+    let vastus9=document.getElementById("vastus9");
+    let raadiojaam=document.getElementById("raadiojaam");
+
+    vastus9.innerHTML="Valitud jaama nimi on: " + raadiojaam.value;
 }
