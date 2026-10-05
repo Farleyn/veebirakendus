@@ -1,3 +1,4 @@
+// 1. küsimus
 function checkboxValik(){
     let checkboxid=document.getElementById("checkboxid");
     let js=document.getElementById("js");
@@ -23,6 +24,7 @@ function checkboxValik(){
     return valik;
 }
 
+// 6. küsimus
 function checkboxValik1(){
     let checkboxid=document.getElementById("checkboxid1");
     let js=document.getElementById("cpp");
@@ -57,6 +59,7 @@ function checkboxValik1(){
     return valik1;
 }
 
+// 2. küsimus
 function textArea(){
     let textarea = document.getElementById("textarea");
     let textbox = document.getElementById("textbox");
@@ -67,6 +70,7 @@ function textArea(){
     return textbox.value;
 }
 
+// 5. küsimus
 function textArea1(){
     let textarea = document.getElementById("textarea1");
     let textbox = document.getElementById("textbox1");
@@ -77,6 +81,7 @@ function textArea1(){
     return textbox.value;
 }
 
+// 3. küsimus
 function rangeValik(){
     let vastus2=document.getElementById("vastus2");
     let tund = document.getElementById("tund");
@@ -87,6 +92,7 @@ function rangeValik(){
     return tund.value;
 }
 
+// 4. küsimus
 function radioValik() {
     let yes = document.getElementById("yes");
     let no = document.getElementById("no");
