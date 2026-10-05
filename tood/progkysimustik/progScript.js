@@ -29,7 +29,7 @@ function checkboxValik1(){
     let py=document.getElementById("csharp");
     let java=document.getElementById("c");
 
-    let valik="";
+    let valik1="";
     if(cpp.checked){
         valik+=cpp.value + ', ';
     }
@@ -48,13 +48,13 @@ function checkboxValik1(){
     if(php.checked){
         valik+=php.value + ', ';
     }
-    if(valik==""){
+    if(valik1==""){
         valik="Palun vali midagi";
     }
-    checkboxid.innerHTML="Sinu valik: " + valik;
+    checkboxid.innerHTML="Sinu valik: " + valik1;
     checkboxid.style.color="blue";
 
-    return valik;
+    return valik1;
 }
 
 function textArea(){
@@ -103,9 +103,9 @@ function radioValik() {
 
 function naitaKoike(){
     let vastused=document.getElementById("vastused");
-    let js=checkboxValik();
-    let py=checkboxValik();
-    let java=checkboxValik();
+    let valik=checkboxValik();
+    let valik1=checkboxValik();
+    let textarea=textArea()
 
-    vastusKoik.innerHTML="Sa tead need keeled: " +js+ +py+ +java;
+    vastusKoik.innerHTML="Sa tead need keeled: " +valik +' sinu arvamus' +textarea;
 }
