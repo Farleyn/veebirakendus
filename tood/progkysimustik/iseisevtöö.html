@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmeerimise küsimustik</title>
+    <link rel="stylesheet" href="progStyle.css">
+    <script src="progScript.js"></script>
+</head>
+<body>
+
+<h1>Programmeerimise küsimustik</h1>
+
+<fieldset>
+<legend>Milliseid programmeerimiskeeli sa tead?</legend>
+<input type="checkbox" name="progkeeled" id="js" value="JavaScript" onchange="checkboxValik()">
+<label for="js">JavaScript</label>
+<br>
+<input type="checkbox" name="progkeeled" id="py" value="Python" onchange="checkboxValik()">
+<label for="py">Python</label>
+<br>
+<input type="checkbox" name="progkeeled" id="java" value="Java" onchange="checkboxValik()">
+<label for="java">Java</label>
+    <td>
+        <div id="checkboxid"></div>
+    </td>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <legend>Mida arvad programmeerimise õppimisest?</legend>
+    <textarea name="textbox" id="textbox" cols="30" rows="5" placeholder="Sisesta vastus siia" oninput="textArea()"></textarea>
+    <td>
+        <div id="textarea"></div>
+    </td>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <td>
+    <legend>Mitu tundi nädalas tegeled programmeerimisega?</legend>
+    </td>
+    <td>
+        <input type="range" id="tund" name="tund" min="0" max="168" onchange="rangeValik()">
+    </td>
+    <td>
+        <div id="vastus2"></div>
+    </td>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <td>
+        <legend>Kas sulle meeldib programmeerida?</legend>
+    </td>
+    <td>
+        <input type="radio" id="yes" name="raadioValik" value="jah" onclick="radioValik()">
+        <label for="yes">Jah</label>
+        <img src="../images/smile.png" alt="" width="25">
+        <input type="radio" id="no" name="raadioValik" value="ei" onclick="radioValik()">
+        <label for="no">Ei</label>
+        <img src="../images/kurb.png" alt="" width="25">
+    </td>
+    <td>
+        <div id="rnuppud"></div>
+    </td>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <legend>Milliseid programmeerimisega seotud tööriistu oskad nimetada?</legend>
+    <textarea name="textbox" id="textbox1" cols="30" rows="5" placeholder="Sisesta vastus siia" oninput="textArea1()"></textarea>
+    <td>
+        <div id="textarea1"></div>
+    </td>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <legend>Millist programmeerimiskeelt sooviksid kõige rohkem õppida?</legend>
+    <input type="checkbox" name="progkeeled" id="cpp" value="C++" onchange="checkboxValik1()">
+    <label for="cpp">C++</label>
+    <br>
+    <input type="checkbox" name="progkeeled" id="csharp" value="C#" onchange="checkboxValik1()">
+    <label for="csharp">C#</label>
+    <br>
+    <input type="checkbox" name="progkeeled" id="c" value="C" onchange="checkboxValik1()">
+    <label for="c">C</label>
+    <br>
+    <input type="checkbox" name="progkeeled" id="lua" value="Lua" onchange="checkboxValik1()">
+    <label for="lua">Lua</label>
+    <br>
+    <input type="checkbox" name="progkeeled" id="go" value="Go" onchange="checkboxValik1()">
+    <label for="go">Go</label>
+    <br>
+    <input type="checkbox" name="progkeeled" id="php" value="PHP" onchange="checkboxValik1()">
+    <label for="php">PHP</label>
+
+    <td>
+        <div id="checkboxid1"></div>
+    </td>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <legend>Nüüd vali mida sa tahad andmetega teha</legend>
+<tr>
+    <td>
+        <input type="reset" value="Puhasta" onclick="puhasta()">
+    </td>
+    <td>
+        <input type="button" value="Näita/Loe andmed" onclick="naitaKoike()">
+    </td>
+    <td>
+        <div id="vastusKoik"></div>
+    </td>
+</tr>
+</fieldset>
+
+</body>
+</html>

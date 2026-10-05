@@ -38,9 +38,9 @@ function radioValik1() {
     let vastus = document.getElementById("yesorno");
 
     if (yes.checked) {
-        vastus.innerHTML = "sa valisid: jah";
+        vastus.innerHTML = "Programmeerimine meeldib!";
     } else if (no.checked) {
-        vastus.innerHTML = "sa valsid: ei";
+        vastus.innerHTML = "Programmeerimine ei meeldib!";
     }
 }
 
