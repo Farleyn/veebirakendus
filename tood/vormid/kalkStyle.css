@@ -1,0 +1,25 @@
+section#yld{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+section#kalk1{
+    border: 1pt solid grey;
+    border-radius: 10px;
+    width: 30%;
+    padding: 1px;
+}
+section#kalk2{
+    border: 1pt solid grey;
+    border-radius: 10px;
+    width: 30%;
+}
+section#kalk3{
+    border: 1pt solid grey;
+    border-radius: 10px;
+    width: 30%;
+}
+
+img#vastusepilt{
+    width: 100px;
+}
