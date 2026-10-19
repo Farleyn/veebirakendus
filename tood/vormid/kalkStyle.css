@@ -42,7 +42,7 @@ img:not([src]), img[src=""] {
     display: none;
 }
 
-section#kalk3 input[type="text"] {
+section#kalk3 input[type="number"] {
     width: 60px;
     border: 1pt solid #3b4a55;
     border-radius: 5px;
