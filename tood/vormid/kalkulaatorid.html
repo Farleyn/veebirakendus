@@ -49,7 +49,7 @@
     <section id="kalk3">
         <h2>Kütuse kalkulaator</h2>
         <label for="liitrid">Mitu liitrit tankid: </label>
-        <input type="text" id="liitrid" value="10" oninput="kytuseArvutus()">
+        <input type="number" id="liitrid" min="1" max="100" step="1" value="10" oninput="kytuseArvutus()">
         <br>
         <input type="radio" name="kytusevalik" id="bensiin" value="bensiin" onchange="kytuseArvutus()">
         <label for="bensiin">Bensiin 95</label>
