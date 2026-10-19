@@ -12,14 +12,14 @@ function teisendamine(){
     for(let i=0; i<valik.length; i++){
         if(valik[i].checked){
             if(valik[i].value=="meeter"){
-                vastus.innerHTML=arv.value + ' meetri = ' +
-                arv.value*toll +' tolli';
+                vastus.innerHTML=arv.value + ' meetrit = ' +
+                    (arv.value*toll).toFixed(2) +' tolli';
                 vastus.style.color='red';
 
                 vastusepilt.src="https://www.taskutark.ee/wp-content/uploads/2015/08/10408600_1.jpg";
             }  else if(valik[i].value==="tolli"){
-                vastus.innerHTML=arv.value*meeter + 'tolli = '+
-                arv.value*meeter+'meetri';
+                vastus.innerHTML=arv.value + ' tolli = '+
+                    (arv.value*meeter).toFixed(4)+' meetrit';
                 vastus.style.color='green';
                 vastusepilt.src="https://sauerauakaubad.ee/wp-content/uploads/2025/07/toll_page-0001-1-558x1024.jpg"
             }
