@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery kasutamine</title>
+  <link rel="stylesheet" href="queryStyle.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>  <script>
+    $(document).ready(function () {
+      $('#kuva').hide();
+      // nupu peida vajutamine
+      $('#peida').click(function () {
+        $('#sisu').hide(500);
+        $(this).hide();
+        $('#kuva').show();
+      });
+      // nupu kuva vajutamine
+      $('#kuva').click(function () {
+        $('#sisu').show(500);
+        $(this).hide();
+        $('#peida').show();
+      });
+    });
+    function start(){
+      $('#sisu').draggable(); // lohistada hiirega veebilehel
+      $('#pilt').draggable();
+      $('#sisu').bind("drag", xyKoordinat);
+      $('#pilt').bind("drag", xyKoordinat);
+    }
+    function xyKoordinat(event, ui){
+      let koht = ui.offset;
+      $('#vastus').html('x: '+koht.left+ '//// y: '+koht.top);
+    }
+  </script>
+
+</head>
+<body onload="start()">
+
+<header>
+  <h1>jQuery kasutamine</h1>
+</header>
+<main>
+  <input type="button" value="<---" id="vasakule" style="display:none" onclick="$('#sisu, h2').animate({left: '0px'}, 1000);
+  $(this).hide();
+  $('#paremale').show();">
+  <input type="button" value="--->" id="paremale" onclick="$('#sisu, h2').animate({left: '500px'}, 1000);
+  $(this).hide();
+  $('#vasakule').show();">
+  <input type="button" value="Peida" id="peida">
+  <input type="button" value="Kuva" id="kuva">
+  <section>
+    <h2>Mis on jQuery?</h2>
+    <div id="sisu">
+      jQuery on JavaScripti teek, mis keskendub JavaScripti ja HTML-i vastastikusele mõjule. jQuery raamistik võimaldab saada kergesti juurdepääsu ükskõik missugusele DOM-elemendile, pöörduda DOM-elementide sisu ja atribuutide poole ning nendega manipuleerida. Samuti pakub jQuery raamistik mugavat API-t AJAX-iga töötamisel.
+    </div>
+  </section>
+  <section>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/The_Earth_seen_from_Apollo_17_with_transparent_background.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="pilt" id="pilt">
+    <div id="vastus"></div>
+  </section>
+</main>
+
+</body>
+</html>
