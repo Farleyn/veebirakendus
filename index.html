@@ -1,21 +1,56 @@
-<!DOCTYPE html><!--deklareerime HTML5 keel-->
+<!DOCTYPE html>
 <html lang="et">
 <head>
-
-    <!--veebilehe tehniline info-->
     <meta charset="UTF-8">
     <title>Nikita Grossholm veebirakenduste aluse tööd</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#kuva').hide();
+            $('#uus').hide();
+
+            $('#peida').click(function () {
+                $('#sisu').hide(500);
+                $(this).hide();
+                $('#kuva').show();
+            });
+
+            $('#kuva').click(function () {
+                $('#sisu').show(500);
+                $(this).hide();
+                $('#peida').show();
+            });
+
+            $('#efekt').click(function () {
+                $('header h1').slideToggle(500);
+            });
+        });
+
+        function start(){
+            $('#sisu').draggable();
+            $('#pilt').draggable();
+            $('#sisu').bind("drag", xyKoordinat);
+            $('#pilt').bind("drag", xyKoordinat);
+        }
+
+        function xyKoordinat(event, ui){
+            let koht = ui.offset;
+            $('#vastus').html('x: '+koht.left+ '//// y: '+koht.top);
+        }
+    </script>
 </head>
-<body>
-<!--veebilehe sisu-->
-<!--päis-->
+
+<body onload="start()">
+
 <header>
     <h1>
         Nikita Grossholm veebirakenduste aluse tööd
     </h1>
 </header>
-<!--navigerimistmenüü-->
+
 <nav>
     <ul>
         <li>
@@ -36,29 +71,55 @@
     </ul>
 </nav>
 
-<!--põhisisu-->
 <main>
+    <input type="button" value="<---" id="vasakule" style="display:none" onclick="$('#sisu, h2').animate({left: '0px'}, 1000);
+    $(this).hide();
+    $('#paremale').show();">
+
+    <input type="button" value="--->" id="paremale" onclick="$('#sisu, h2').animate({left: '500px'}, 1000);
+    $(this).hide();
+    $('#vasakule').show();">
+
+    <input type="button" value="Lisa efekt" id="efekt">
+
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
+
     <section id="kast1">
         <h2>
             Tere tulemast!
         </h2>
-        <p>
+        <div id="sisu">
             See on index leht mis on tehtud 1. veebirakendus tunnis!
             Palun vajuta teise lingi peale ning kontrolli et sisu on tändetud
-        </p>
+        </div>
     </section>
+
     <section id="kast2">
         <h3>
             Põnev pilt
         </h3>
         <div>
-            <img src="pilt.png" alt="see on ise tehtud pilt">
+            <img src="pilt.png" alt="see on ise tehtud pilt" id="pilt">
+        </div>
+        <div id="vastus"></div>
+    </section>
+    <section id="selgitus">
+        <h2>JQuery'ga on tehtud:</h2>
+        <div>
+            <ul>
+                <li>draggable pilt</li>
+                <li>peida ja näita tekst</li>
+                <li>liiguta teksti paremale ja vasakule</li>
+                <li>oma: slide toggle efekt</li>
+            </ul>
         </div>
     </section>
 </main>
-<!--jalus-->
+
 <footer>
     Nikita Grossholm leht &copy; 2026
 </footer>
+
 </body>
 </html>
