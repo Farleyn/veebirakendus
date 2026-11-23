@@ -52,6 +52,23 @@ nav ul li a:hover {
     color: yellow;
 }
 
+.ul_kujundus {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.li_kujundus {
+    display: inline;
+}
+
+#menyy li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
 main {
     margin: 30px;
     display: grid;

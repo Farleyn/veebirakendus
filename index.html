@@ -40,6 +40,11 @@
             let koht = ui.offset;
             $('#vastus').html('x: '+koht.left+ '//// y: '+koht.top);
         }
+
+        $(function(){
+            $('#menyy').addClass('ul_kujundus');
+            $('#menyy li').addClass('li_kujundus');
+        });
     </script>
 </head>
 
@@ -64,6 +69,11 @@
         </li>
         <li>
             <a href="tood.html">Tehtud tööd</a>
+            <ul id="menyy">
+                <li><a href="tood/joonis/canvasJoonistamine.html">Auto</a></li>
+                <li><a href="tood/vormid/kysimustik.html">Küsimustik</a></li>
+                <li><a href="tood/paberiülesanne.html">Paberi ülesanne</a></li>
+            </ul>
         </li>
         <li>
             <a href="meedia.html">Meedia</a>
